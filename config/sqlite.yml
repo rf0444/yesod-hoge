@@ -1,0 +1,20 @@
+Default: &defaults
+  database: hoge.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Test:
+  database: hoge_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: hoge_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: hoge_production.sqlite3
+  poolsize: 100
+  <<: *defaults
