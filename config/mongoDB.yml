@@ -1,20 +1,24 @@
 Default: &defaults
-  database: hoge.sqlite3
+  user: hoge
+  password: hoge
+  host: localhost
+  port: 27017
+  database: hoge
   poolsize: 10
 
 Development:
   <<: *defaults
 
-Test:
-  database: hoge_test.sqlite3
+Testing:
+  database: hoge_test
   <<: *defaults
 
 Staging:
-  database: hoge_staging.sqlite3
+  database: hoge_staging
   poolsize: 100
   <<: *defaults
 
 Production:
-  database: hoge_production.sqlite3
+  database: hoge_production
   poolsize: 100
   <<: *defaults
